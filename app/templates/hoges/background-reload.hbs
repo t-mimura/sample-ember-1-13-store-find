@@ -1,0 +1,16 @@
+<h1>this.store.findAll('hoge', {reload: false})</h1>
+
+<ul>
+{{#each model as |hoge|}}
+  <li>{{hoge.label}} - {{hoge.value}} - {{#link-to 'hoge' hoge}}default{{/link-to}} - {{#link-to 'hoge.reload' hoge}}reload{{/link-to}}</li>
+{{/each}}
+</ul>
+
+<p>
+  <code>adapter:application.shouldBackgroundReload</code>の戻りを<code>true</code>になるように一時的に変更
+</p>
+<p>
+  画面遷移を先に完了し、データ更新（<code>store.findAll</code>）の結果が戻り次第モデルに反映＝画面に反映という動き。
+</p>
+
+{{outlet}}

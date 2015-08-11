@@ -1,0 +1,9 @@
+<h1>this.store.findAll('hoge', {reload: false})</h1>
+
+<ul>
+{{#each model as |hoge|}}
+  <li>{{hoge.label}} - {{hoge.value}} - {{#link-to 'hoge' hoge}}default{{/link-to}} - {{#link-to 'hoge.reload' hoge}}reload{{/link-to}}</li>
+{{/each}}
+</ul>
+
+{{outlet}}

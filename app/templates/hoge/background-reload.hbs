@@ -1,0 +1,15 @@
+<h1>store.findRecord('hoge', id, {reload: false})</h1>
+
+<p>
+  {{model.label}} - {{model.value}}
+</p>
+
+<p>
+  <code>adapter:application.shouldBackgroundReload</code>の戻りを<code>true</code>になるように一時的に変更
+</p>
+<p>
+  画面遷移を先に完了し、データ更新（<code>store.findAll</code>）の結果が戻り次第モデルに反映＝画面に反映という動き。
+</p>
+
+{{outlet}}
+
